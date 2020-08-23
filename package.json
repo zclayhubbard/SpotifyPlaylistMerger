@@ -1,0 +1,16 @@
+{
+  "author": "Zyanne Clay-Hubbard",
+  "name": "SpotifyPlaylistMerger",
+  "description": "Personal project, developing a Node/React app that merges playlists using the Spotify API.",
+  "version": "0.0.2",
+  "dependencies": {
+    "cookie-parser": "1.3.2",
+    "cors": "^2.8.4",
+    "express": "~4.16.0",
+    "express-react-views": "^0.11.0",
+    "querystring": "~0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "request": "~2.83.0"
+  }
+}
