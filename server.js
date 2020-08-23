@@ -15,7 +15,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 var client_id = 'c79e14c29df141a7913f82ffeeff89b9'; // Your client id
-var client_secret = '52a7db51008a48de94da3ab0240aa08f'; // Your secret
+var client_secret = ; // Your secret
 var redirect_uri = 'http://localhost:8888/showplaylists'; // Your redirect uri
 
 app.get('/', function(req, res){
