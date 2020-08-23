@@ -3,6 +3,7 @@ var request = require('request');
 var cors = require('cors');
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
+var readline = require('readline');
 
 const app = express();
 
@@ -15,8 +16,21 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 var client_id = 'c79e14c29df141a7913f82ffeeff89b9'; // Your client id
-var client_secret = '52a7db51008a48de94da3ab0240aa08f'; // Your secret
+var client_secret = '';
 var redirect_uri = 'http://localhost:8888/showplaylists'; // Your redirect uri
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+  
+rl.question('Please provide client secret ', (answer) => {
+    client_secret = answer;
+    console.log('Listening on port 8888');
+    app.listen(8888);
+
+    rl.close();
+});
 
 app.get('/', function(req, res){
     res.render('index', {});
@@ -103,5 +117,3 @@ app.get('/showplaylists', function(req, res){
 
 });
 
-console.log('Listening on port 8888');
-app.listen(8888);
