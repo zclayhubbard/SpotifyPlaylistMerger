@@ -117,8 +117,6 @@ app.get('/showplaylists', function(req, res){
 
 });
 
-<<<<<<< HEAD
-=======
 console.log('Listening on port 8888');
 app.listen(8888);
->>>>>>> 28dd9727f97dd7a5e2a3ee8b7f1b157a16594bb8
+
